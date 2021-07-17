@@ -1,0 +1,27 @@
+# Contributing to GdiPlusExtensions
+
+First of all, thank you for your interest in contributing to this repository. 
+
+It is requested to adhere to the programming style as given below.
+
+## Style of Code
+
+- **There should not be any newly defined public Type for representing an image**: all extension/helper methods should work on the `Bitmap` and `Image` classes defined in `System.Drawing.Common`. Any new Type whose descrive is to represent an image (as an alternative to `Bitmap`) is not allowed. Such Types can be used internally (and thus, are allowed to be `internal`)
+- **The rulesets dictated by the .editorconfig file must be followed.**: Be sure to use extensions in your IDE to enable the rulesets defined in the given `.editorconfig` file.
+- **All added features should be explained**: This can be done by including a proper documentation within the code, adding a markdown file within the folder/namespace for explaination or simply including an appropriate link. 
+- **Do not include images within the repository unless necessary**: All images to showcase/demonstrate the features of code should be displayed in the Wiki, and not in the repository itself. This git repository is solely for code.
+
+## What can I contribute
+
+- Check for any open issue to work on.
+- Check for any bugs/issues in the existing code.
+- Improvements on the Wiki.
+- Any grammatical/spelling mistakes. ¯\_(ツ)_/¯
+
+# Opening an issue:
+
+- Kindly do not open an issue to ask a question. Use the Discussion board for that. 
+- Please be clear and polite while describing the bug.
+- In case the bug is related to code not drawing/modifying an image as expected, please include a sample image in the messages as well.
+
+---
