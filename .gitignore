@@ -1,0 +1,9 @@
+[bB]in/
+[oO]bj/
+.vs/
+.vscode/
+[sS]amples/
+TestImages/
+ExampleImages/
+*.workspace
+*.zip
