@@ -20,11 +20,17 @@ The repository contains the following:
 
 You can view more details on the individual features in the respective README files of each folder in the source code.
 
-You can check out the wiki as well
+You can check out the [wiki](https://github.com/AzuxirenLeadGuy/GdiPlusExtension/wiki) as well
 
 ## Example code
 
 The following example shows how to apply a filter using the extension methods `Filter()`, provided in this library
+
+Given an image 
+
+![](https://raw.githubusercontent.com/wiki/AzuxirenLeadGuy/GdiPlusExtension/Images/x.jpg)
+
+we can apply filter as follows 
 
 ```cs
 using Bitmap image = ...//Open a bitmap image
@@ -32,7 +38,11 @@ using Bitmap image = ...//Open a bitmap image
 image.Filter(ConvolutionFilter.GaussianFilter); //Filter has been applied!
 ```
 
-All features in the library including examples are covered in the Wiki as well. You can also check out the `Example` project to see the code for all the functions being applied to a single image.
+to get
+
+![](https://raw.githubusercontent.com/wiki/AzuxirenLeadGuy/GdiPlusExtension/Images/FilteredImages/x-Gaussian_Blur_Filter.png)
+
+All features in the library including examples are covered in the [Wiki](https://github.com/AzuxirenLeadGuy/GdiPlusExtension/wiki) as well. You can also check out the `Example` project to see the code for all the functions being applied to a single image.
 
 ## Adding this library to your code
 
@@ -50,3 +60,8 @@ Head to the Discussions Tab. You can keep it informal. I probably might respond 
 ## License
 
 This repository is licensed under the [MIT License](./LICENSE)
+
+## Release notes
+
+- v 0.1
+	- Initial release

@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<PackageId>Azuxiren.GdiPlusExtensions</PackageId>
+		<Version>0.1</Version>
+		<Authors>AzuxirenLeadGuy</Authors>
+		<Company>Azuxiren</Company>
+		<RepositoryUrl>https://github.com/AzuxirenLeadGuy/GdiPlusExtension</RepositoryUrl>
+		<Description>Simple Image-Processing helper library having extension methods for Bitmap class</Description>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageTags>Bitmap;gdiplus;gdi-plus;Dither;Dithering;Filter;image;ImageProcessing;image-processing;Package</PackageTags>
+		<PackageIcon>icon.png</PackageIcon>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<Title>GdiPlus Extensions</Title>
+		<Summary>Simple Image-Processing library for Bitmap class</Summary>
+		<PackageReleaseNotes>
+- Initial Release
+			</PackageReleaseNotes>
+		<Language>C#</Language>
+		<RepositoryType>git</RepositoryType>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="icon.png" Pack="true" PackagePath="." />
+		<PackageReference Include="System.Drawing.Common" Version="5.0.2" />
+	</ItemGroup>
+
+</Project>
