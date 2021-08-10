@@ -37,6 +37,7 @@ namespace Example
 				ConvolutionFilter.GaussianFilter,
 				new BilateralFilter() {KernelSize=9, SigmaColor=50, SigmaSpace=40},
 				new MedianFilter() {KernelSize=7},
+				new TintFilter(Color.Yellow, 80),
 			};
 			foreach (IFilterType filter in filters)
 			{
