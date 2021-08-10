@@ -11,9 +11,23 @@ namespace GdiPlusExtensions.Filters
 		public string FilterName => "Tinting Filter";
 		/// <inheritdoc/>
 		public byte KernelSize => 1;
-		public Color ColorToTint { get; private set; }
+		/// <summary>
+		/// The Color with which the tinting is to be done
+		/// </summary>
+		public readonly Color ColorToTint;
 		internal (int R, int G, int B) WeightedColorTint;
-		public byte Intensity { get; private set; }
+		/// <summary>
+		/// The value of the intensity [0, 255] for tinting. This is
+		/// the parameter for the Lerp process, i.e linear interpolation
+		/// between two colors
+		///<br/>
+		/// 0 : No tinting
+		///<br/>
+		/// n : Color is set to Lerp(Original, Tint, Intensity)
+		///<br/>
+		///255 : All pixels are replaced with ColorToTint
+		/// </summary>
+		public readonly byte Intensity;
 		internal readonly byte Remaining;
 		/// <summary>
 		///
