@@ -12,6 +12,7 @@ The repository contains the following:
 		- Gaussian filter
 	- Median Filter
 	- Bilateral Filter
+	- ColorTint Filter
 - Dithering
 	- Thresholding
 	- Random Dithering
