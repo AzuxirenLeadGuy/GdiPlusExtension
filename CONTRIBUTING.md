@@ -15,11 +15,12 @@ It is requested to adhere to the programming style as given below.
 
 ## What can I contribute
 
-- This library needs more features.
+- Star this repository.
+- This library doesn't have many features, so feel free to enhance this library.
 - Check for any open issue to work on.
-- Check for any bugs/issues in the existing code.
+- If any bugs/issues exist, or there are some features you want to have added to this library, feel free to open an issue, 
 - Improvements on the Wiki.
-- Any grammatical/spelling mistakes. ¯\_(ツ)_/¯
+- Any grammatical/spelling mistakes. ¯\\_(ツ)_/¯
 
 # Opening an issue:
 
