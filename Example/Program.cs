@@ -115,6 +115,23 @@ namespace Example
 			}
 			Console.WriteLine("Dithering showcase complete!");
 			#endregion
+			#region ColorLerpShowcase
+			DirectoryInfo ldinfo = Directory.CreateDirectory($"{DirPath}/ScaledImages");
+			(Color, Color)[] CustomScaleArgs = 
+			{
+				(Color.Black, Color.White),
+				(Color.Black, Color.Red),
+				(Color.DarkGreen, Color.GreenYellow),
+			};
+			foreach((Color, Color) tuple in CustomScaleArgs)
+			{
+				using Bitmap copy = img.DeepClone();
+				copy.CustomScale(tuple.Item1, tuple.Item2);
+				string filepath = $"{ldinfo.FullName}/{filename}-{tuple}.png";
+				Console.WriteLine($"Saving file {filepath}");
+				copy.Save(filepath, ImageFormat.Png);
+			}
+			#endregion
 			img.Dispose();
 		}
 	}
