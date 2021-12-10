@@ -18,6 +18,7 @@ The repository contains the following:
 	- Random Dithering
 	- Patterning Dither or Error-Diffusion Dither
 	- Ordered Dithering
+- Color Scaling
 
 You can view more details on the individual features in the respective README files of each folder in the source code.
 
