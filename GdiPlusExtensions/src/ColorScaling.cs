@@ -3,14 +3,14 @@ using System.Drawing;
 namespace GdiPlusExtensions
 {
 	/// <summary>
-	/// Extension methods for Lerp operations
+	/// Extension methods for Color scaling and Lerp operations
 	/// </summary>
-	public static class ColorLerp
+	public static class ColorScaling
 	{
 		/// <summary>
-		/// Returns the Color obtained using Linear Interpolation(Lerp) 
-		/// between the two colors. 
-		/// 
+		/// Returns the Color obtained using Linear Interpolation(Lerp)
+		/// between the two colors.
+		///
 		/// </summary>
 		/// <param name="x">Color at value=0</param>
 		/// <param name="y">Color at value=1</param>
@@ -24,8 +24,8 @@ namespace GdiPlusExtensions
 			return Color.FromArgb(r, g, b);
 		}
 		/// <summary>
-		/// Returns an image of which every pixel is 
-		/// interpolated between given two colors and 
+		/// Returns an image of which every pixel is
+		/// interpolated between given two colors and
 		/// the interpolation value is their intensity
 		/// </summary>
 		/// <param name="bitmap">The image to interpolate</param>
@@ -55,6 +55,6 @@ namespace GdiPlusExtensions
 		/// </summary>
 		/// <param name="bitmap">Image to grayscale</param>
 		/// <returns>Grayscaled image</returns>
-		public static Bitmap Grayscale(this Bitmap bitmap)=>CustomScale(bitmap, Color.Black, Color.White);
+		public static Bitmap Grayscale(this Bitmap bitmap) => CustomScale(bitmap, Color.Black, Color.White);
 	}
 }
