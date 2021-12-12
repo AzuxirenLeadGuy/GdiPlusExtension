@@ -26,13 +26,13 @@ You can check out the [wiki](https://github.com/AzuxirenLeadGuy/GdiPlusExtension
 
 ## Example code
 
-The following example shows how to apply a filter using the extension methods `Filter()`, provided in this library
+The following example shows how to apply a filter using the extension method `Filter()`, provided in this library
 
 Given an image 
 
 ![](https://raw.githubusercontent.com/wiki/AzuxirenLeadGuy/GdiPlusExtension/Images/x.jpg)
 
-we can apply filter as follows 
+we can apply filter as shown
 
 ```cs
 using Bitmap image = ...//Open a bitmap image
@@ -48,16 +48,20 @@ All features in the library including examples are covered in the [Wiki](https:/
 
 ## Adding this library to your code
 
-You can add the [Nuget package](https://www.nuget.org/packages/Azuxiren.GdiPlusExtensions/) for this repository. You can also clone this repository add the `GdiPlusExtensions` project as a reference in your project.
+You can add the [Nuget package](https://www.nuget.org/packages/Azuxiren.GdiPlusExtensions/) for this repository. You can also clone this repository and add the `GdiPlusExtensions` project as a reference in your project.
 
 
 ## Contributing
 
-Check out the [Contributing.md](./CONTRIBUTING.md) file detailed information.
+Check out the [Contributing.md](./CONTRIBUTING.md) detailed information on contribtion to this repository.
 
 ## Have a question? or want to have a general discussion?
 
-Head to the Discussions Tab. You can keep it informal. I probably might respond before the end of the world.
+Head to the Discussions Tab. You can keep it informal. I probably might respond.
+
+## Notice any bugs/Issues in the code? Or do you have any suggestions to improve?
+
+You can create an issue for it.
 
 ## License
 
