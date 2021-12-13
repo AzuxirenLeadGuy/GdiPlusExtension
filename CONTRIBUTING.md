@@ -11,7 +11,7 @@ It is requested to adhere to the programming style as given below.
 - **All added features should be explained**: This can be done by including a proper documentation within the code, adding a markdown file within the folder/namespace for explaination or simply including an appropriate link. 
 - **All available features must be showcased as a code in the "Examples" project**: The Example project takes a single image path from the CLI, and outputs the image in its appropriate folder with every extension/helper method of the code. The program is distributed in regions according to how the main project is organized in namespaces. This style should be kept consistent.
 - **All added features must be mentioned in the README.md at root of the repository**
-- **Do not include images within the repository unless necessary**: All images to showcase/demonstrate the features of code should be displayed in the Wiki, and not in the repository itself. This git repository is solely for code.
+- **Do not include images within the repository (unless necessary)**: All images to showcase/demonstrate the features of code should be displayed in the Wiki, and not in the repository itself. This git repository is solely for code. If any images are necessary to be added, include such justification in the PR.
 
 ## What can I contribute
 
