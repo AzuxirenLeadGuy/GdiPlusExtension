@@ -51,15 +51,28 @@ namespace GdiPlusExtensions
 		/// <summary>
 		/// Applies brightness change to the image
 		/// </summary>
-		/// <param name="bitmap">The image for which the brightness is to be affected</param>
-		/// <param name="bf">The brightness factor</param>
-		public static void AdjustBrightness(this Bitmap bitmap, sbyte bf)
+		/// <param name="bitmap">The image for which the brightness is to be changed</param>
+		/// <param name="bf">The brightness factor. Should be in the range [-255, 255]</param>
+		public static void AdjustBrightness(this Bitmap bitmap, short bf)
 		{
+			if (bf >= 255) bf = 255;
+			else if (bf <= -255) bf = -255;
 			bitmap.ApplyFuncForeachPixel(adjust);
-			Color adjust(Color c)
-			{
-				return Color.FromArgb(Clamp(c.R + bf), Clamp(c.G + bf), Clamp(c.B + bf));
-			}
+			Color adjust(Color c) => Color.FromArgb(Clamp(c.R + bf), Clamp(c.G + bf), Clamp(c.B + bf));
+		}
+		/// <summary>
+		/// Applies contrast change to the image
+		/// </summary>
+		/// <param name="bitmap">The image for which the contrast is to be changed</param>
+		/// <param name="cf">The contrast factor. Should be in the range [-255, 255]</param>
+		public static void AdjustContrast(this Bitmap bitmap, short cf)
+		{
+			if (cf >= 255) cf = 255;
+			else if (cf <= -255) cf = -255;
+			float f = 259 * (cf + 255) / (255.0f * (259 - cf));
+			bitmap.ApplyFuncForeachPixel(adjust);
+			byte Eval(byte x) => Clamp((int)Math.Round(128 + f * (x - 128)));
+			Color adjust(Color c) => Color.FromArgb(Eval(c.R), Eval(c.G), Eval(c.B));
 		}
 		internal static byte Clamp(int x)
 		{
