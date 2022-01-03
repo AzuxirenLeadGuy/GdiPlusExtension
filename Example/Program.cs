@@ -21,13 +21,14 @@ namespace Example
 			{
 				img = Image.FromFile(args[0]) as Bitmap;
 			}
-			catch
+			catch (Exception ex)
 			{
-				Console.WriteLine($"Given image file path is invalid!");
+				Console.WriteLine($"Encountered an exception while opening the image file!\n" + ex.ToString());
 				return;
 			}
 			string DirPath = Directory.GetParent(args[0]).FullName;
 			string filename = Path.GetFileNameWithoutExtension(args[0]);
+			/*
 			#region FilterShowcase
 			Console.WriteLine("Beginning filtering showcase");
 			DirectoryInfo fdinfo = Directory.CreateDirectory($"{DirPath}/FilteredImages");
@@ -130,6 +131,28 @@ namespace Example
 				string filepath = $"{ldinfo.FullName}/{filename}-{tuple}.png".Replace(' ', '-');
 				Console.WriteLine($"Saving file {filepath}");
 				copy.Save(filepath, ImageFormat.Png);
+			}
+			#endregion
+			*/
+			#region Brightness & Contrast adjustment showcase
+			DirectoryInfo bcinfo = Directory.CreateDirectory($"{DirPath}/AdjustedB&CImages");
+			short[] values = new short[] { 0, 128, -128, 200, -200 };
+			foreach (short val in values)
+			{
+				using (Bitmap copy = img.DeepClone())
+				{
+					copy.AdjustBrightness(val);
+					string filepath = $"{bcinfo.FullName}/{filename}-bf-{val}.png".Replace(' ', '-');
+					Console.WriteLine($"Saving file {filepath}");
+					copy.Save(filepath, ImageFormat.Png);
+				}
+				using (Bitmap copy = img.DeepClone())
+				{
+					copy.AdjustContrast(val);
+					string filepath = $"{bcinfo.FullName}/{filename}-cf-{val}.png".Replace(' ', '-');
+					Console.WriteLine($"Saving file {filepath}");
+					copy.Save(filepath, ImageFormat.Png);
+				}
 			}
 			#endregion
 			img.Dispose();
