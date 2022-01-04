@@ -28,7 +28,6 @@ namespace Example
 			}
 			string DirPath = Directory.GetParent(args[0]).FullName;
 			string filename = Path.GetFileNameWithoutExtension(args[0]);
-			/*
 			#region FilterShowcase
 			Console.WriteLine("Beginning filtering showcase");
 			DirectoryInfo fdinfo = Directory.CreateDirectory($"{DirPath}/FilteredImages");
@@ -133,7 +132,6 @@ namespace Example
 				copy.Save(filepath, ImageFormat.Png);
 			}
 			#endregion
-			*/
 			#region Brightness & Contrast adjustment showcase
 			DirectoryInfo bcinfo = Directory.CreateDirectory($"{DirPath}/AdjustedB&CImages");
 			short[] values = new short[] { 0, 128, -128, 200, -200 };
